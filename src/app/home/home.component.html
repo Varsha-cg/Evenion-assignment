@@ -1,0 +1,308 @@
+<div class="container" style="max-height:90%;">
+    <div class="card mt-4 bg-light">
+        <mat-divider></mat-divider>
+        <div class="row mt-4">
+            <div class="col mb-3">
+                <div class="card " style="width: 30rem;height: 20rem;">
+                    <div class="card-body p-0" *ngFor="let i of data">
+                        <h1>Account Summary</h1>
+                        <mat-divider></mat-divider>
+                        <div class="d-flex justify-content-around mb-3 mt-3" style="display:flex; flex-direction:row;">
+                            <p>Available Balance</p>
+                            <span class="color-blue"> {{ i.avl_bal | currency}}</span>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <div class="d-flex justify-content-around mb-3 mt-3" style="display:flex; flex-direction:row">
+                            <div class="width">
+                                <p class="text-size">Forward Balance</p>
+                                <span>{{ i.far_bal | currency}}</span>
+                            </div>
+                            <div>
+                                <p class="text-size">Credit Limit</p>
+                                <span>{{ i.credit_limit | currency}}</span>
+                            </div>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <div class="d-flex justify-content-around mb-3 mt-3" style="line-height: 20px;">
+                            <div>
+                                <p class="text-size"> Spending Plus Adjusment</p>
+                                <span>{{ i.spen_p_adj | currency}}</span>
+                            </div>
+                            <div>
+                                <p class="text-size">Reward Points</p>
+                                <span class="color-blue">{{i.rew_point}}</span>
+                            </div>
+                        </div>
+                        <mat-divider></mat-divider>
+                        <div class="d-flex justify-content-around mb-5 mt-3">
+
+                            <a href="javascript:void(0)" class="uppercase">Download Statements</a>
+                            <a href="javascript:void(0)" class="uppercase">View All Statements</a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- /.card-footer -->
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 30rem;height: 20rem;">
+                    <!-- /.card-header -->
+                    <div class="card-body border-light bg-light">
+                        <div class="row">
+                            <h1 class="test-center">Spending by Category</h1>
+
+                            <!-- <div class="col">
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked style="color: red;">
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Travel
+                                            </label>
+                                            <span>3000</span>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Rental
+                                            </label>
+                                            <span>3000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios"
+                                                id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                Default radio
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="col">
+                                <div class="chart-responsive" style="width: 15rem;height:15rem;">
+                                    <canvas id="CustomerSatisfaction" width="10" height="10"></canvas>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </div>
+        
+    </div>
+    <mat-divider></mat-divider>
+    <div class="row mt-4">
+        <div class="col ">
+            <div class="card border-light bg-light" style="width: 38rem;height: 20rem;">
+                <div class="card-header d-flex justify-content-around">
+                    <h1 class="card-title">Recent Transactions</h1>
+                    <a href="javascript:void(0)" class="uppercase">View All </a>
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body p-0">
+                    <div class="card-body" *ngFor="let i of data">
+                        <mat-card class="mt-2">
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <p class="color-green">{{i.posted_1 | currency}}</p>
+                                    <span>posted</span>
+                                </div>
+                                <div>
+                                    <p>United Airways</p>
+                                    <span>30th Nov 2020</span>
+                                </div>
+                                <div>
+                                    <mat-icon>receipt</mat-icon>
+                                    <mat-icon>more_horiz</mat-icon>
+                                </div>
+                            </div>
+                        </mat-card>
+                        <mat-card class="mt-2">
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <p class="color-green">{{i.posted_2 | currency}}</p>
+                                    <span>posted</span>
+                                </div>
+                                <div>
+                                    <p>United Airways</p>
+                                    <span>30th Nov 2020</span>
+                                </div>
+                                <div>
+                                    <mat-icon>receipt</mat-icon>
+                                    <mat-icon>more_horiz</mat-icon>
+                                </div>
+                            </div>
+                        </mat-card>
+                        <mat-card class="mt-2">
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <p class="color-green">{{i.posted_3 | currency}}</p>
+                                    <span>posted</span>
+                                </div>
+                                <div>
+                                    <p>United Airways</p>
+                                    <span>30th Nov 2020</span>
+                                </div>
+                                <div>
+                                    <mat-icon>receipt</mat-icon>
+                                    <mat-icon>more_horiz</mat-icon>
+                                </div>
+                            </div>
+                        </mat-card>
+                        <mat-card class="mt-2">
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <p class="color-green">{{i.posted_3 | currency}}</p>
+                                    <span>posted</span>
+                                </div>
+                                <div>
+                                    <p>United Airways</p>
+                                    <span>30th Nov 2020</span>
+                                </div>
+                                <div>
+                                    <mat-icon>receipt</mat-icon>
+                                    <mat-icon>more_horiz</mat-icon>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="col">
+            <div class="card border-light bg-light" style="width: 30rem;height: 20rem;">
+                <div class="card-header d-flex justify-content-around">
+                    <h1 class="card-title">Payments</h1>
+                    <a href="javascript:void(0)" class="uppercase">Make payment </a>
+                    <a href="javascript:void(0)" class="uppercase">View All </a>
+                </div>
+                <div class="card-body p-0">
+                    <div class="card-body" *ngFor="let i of data">
+                        <div class="d-flex justify-content-center" style="width: 100%; margin: auto;">
+                            <mat-card>
+                                <p>Amount due</p>
+                                <span>{{i.amount_due | currency}}</span>
+                            </mat-card>
+                            <mat-card class="mx-2">
+                                <p>Amount Date</p>
+                                <span>{{i.due_date }}</span>
+                            </mat-card>
+                        </div>
+                        <mat-card class="mt-2">
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <p class="color-blue">{{i.scheduled | currency}}</p>
+                                    <span>Schduled</span>
+                                </div>
+                                <div>
+                                    <p>Chase checking</p>
+                                    <span>30th Nov 2020</span>
+                                </div>
+                                <div>
+                                    <span><a href="">Edit</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </mat-card>
+                        <mat-card class="mt-2">
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <p>{{i.processed | currency}}</p>
+                                    <span>processed</span>
+                                </div>
+                                <div>
+                                    <p>Chase checking</p>
+                                    <span>30th Nov 2020</span>
+                                </div>
+                                <div>
+                                    <span><a href="">View</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </mat-card>
+                        <mat-card class="mt-2">
+                            <div class="d-flex justify-content-around">
+                                <div>
+                                    <p>{{i.processed | currency}}</p>
+                                    <span>processed</span>
+                                </div>
+                                <div>
+                                    <p>Chase checking</p>
+                                    <span>30th Nov 2020</span>
+                                </div>
+                                <div>
+                                    <span><a href="">View</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </mat-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

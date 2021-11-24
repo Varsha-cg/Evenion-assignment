@@ -1,0 +1,55 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "avl_bal":6740,
+      "far_bal":2151,
+      "credit_limit":10000,
+      "spen_p_adj":1208,
+      "rew_point":12000,
+      "posted_1":58,
+      "posted_2":158,
+      "posted_3":1158,
+      "posted_4":258,
+      "amount_due":500,
+      "due_date":"10 Dec, 2020",
+      "scheduled":100,
+      "processed":500
+    }
+  ],
+  "spent":[
+    {
+      "data": 30,
+      "amount":850.16
+    },
+    {
+      "data": 15,
+      "amount":400.16
+    },
+    {
+      "data":15,
+      "amount":235.16
+    },
+    {
+      "data": 12,
+      "amount":120.16
+    },
+    {
+      "data": 10,
+      "amount":100.16
+    },
+    {
+      "data":8,
+      "amount":850.16
+    },
+    {
+      "data": 5,
+      "amount":850.16
+    },
+    {
+      "data": 5,
+      "amount":850.16
+    }
+    
+  ]
+}
